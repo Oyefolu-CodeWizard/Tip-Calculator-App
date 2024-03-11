@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceland&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.split {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.split big {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 7px;
+  color: hsl(186, 14%, 43%);
+}
+.container {
+  width: 50%;
+  height: 450px;
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  padding: 30px;
+  gap: 20px;
+}
+.calc-tip {
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+}
+.calc-tip p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(184, 14%, 56%);
+  margin-bottom: 10px;
+}
+.bill-input,
+.ppl-input {
+  width: 100%;
+  display: flex;
+  background-color: hsl(189, 41%, 97%);
+  padding: 10px;
+  border-radius: 5px;
+}
+.calc-tip .bill,
+.ppl-input .bill {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+}
+::placeholder {
+  color: hsl(185, 41%, 84%);
+  font-size: 20px;
+}
+.select-tip {
+  margin-top: 30px;
+}
+.select-tip h3,
+.ppl-value span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: hsl(184, 14%, 56%);
+}
+.tip--value {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin-top: 20px;
+}
+.tip--value .tip-btn {
+  border: none;
+  outline: none;
+  background-color: hsl(183, 100%, 15%);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+}
+.tip--value .custom-tip {
+  width: 49.39px;
+  min-width: 100%;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+}
+.bill-input:has(> .bill:focus),
+.ppl-input:has(> .num-of-per:focus),
+.custom-tip:focus {
+  border: 1px solid hsl(172, 67%, 45%);
+}
+.custom-tip::placeholder {
+  font-size: 1.3rem;
+  color: hsl(186, 14%, 43%);
+  font-weight: bold;
+  text-align: left;
+}
+.ppl-value {
+  margin-top: 20px;
+}
+.ppl-input {
+  margin-top: 10px;
+}
+.icon-person,
+.icon-dollar {
+  object-fit: contain;
+}
+.label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.label .input-error {
+  color: red;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.display-calc-tip {
+  width: 100%;
+  background-color: hsl(183, 100%, 15%);
+  padding: 40px;
+  /* border: 1px solid red; */
+  border-radius: 15px;
+}
+.tip-per {
+  display: flex;
+  justify-content: space-between;
+}
+.tip-amount {
+  margin-top: 10px;
+}
+.tip-amount h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.tip-amount p {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: hsl(184, 14%, 56%);
+}
+.tip-value {
+  display: flex;
+}
+.tip-value .dollar {
+  width: 15px;
+  object-fit: contain;
+  color: hsl(172, 67%, 45%);
+}
+.tip-value h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: hsl(172, 67%, 45%);
+}
+.reset-btn {
+  margin-top: 150px;
+}
+.reset-btn .reset {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(172, 67%, 45%);
+  opacity: 0.3;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 428px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .display-calc-tip {
+    height: 250px;
+  }
+  .reset-btn {
+    margin-top: 30px;
+  }
+}
