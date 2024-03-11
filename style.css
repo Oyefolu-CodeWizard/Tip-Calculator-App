@@ -108,7 +108,7 @@ body {
   border: 1px solid hsl(172, 67%, 45%);
 }
 .custom-tip::placeholder {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: hsl(186, 14%, 43%);
   font-weight: bold;
   text-align: left;
