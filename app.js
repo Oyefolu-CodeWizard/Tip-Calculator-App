@@ -21,7 +21,7 @@ const calcTip = function (tip) {
   const numPersonInput = +numOfPersonInput.value;
 
   const totalTip = bill * (tip / 100);
-  const totalAmount = bill + tip;
+  const totalAmount = bill + totalTip;
   const tipPerPerson = parseFloat(totalTip / numPersonInput).toFixed(2);
   const totalPerPerson = parseFloat(totalAmount / numPersonInput).toFixed(2);
 
@@ -34,15 +34,18 @@ for (let i = 0; i < tipBtn.length; i++) {
   tipBtn[i].addEventListener("click", () => {
     for (let r = 0; r < tipBtn.length; r++) {
       tipBtn[r].style.backgroundColor = "hsl(183, 100%, 15%)";
+      tipBtn[r].style.color = "#fff";
     }
 
     tipBtn[i].style.backgroundColor = "hsl(172, 67%, 45%)";
+    tipBtn[i].style.color = "hsl(183, 100%, 15%)";
     const tip = +tipBtn[i].value.slice(0, -1);
+
     if (numOfPersonInput.value === "0" || numOfPersonInput.value === "") {
       peopleInput.style.border = "1px solid red";
       inputError.textContent = "can't be zero";
     } else if (numOfPersonInput.value > "0") {
-      peopleInput.style.border = "none";
+      peopleInput.style.borderColor = "none";
       inputError.textContent = "";
       calcTip(tip);
     }
@@ -63,8 +66,8 @@ window.addEventListener("keydown", (e) => {
 });
 
 resetBtn.addEventListener("click", () => {
-  total.textContent = `0.00`;
-  tipAmountPerPerson.textContent = `0.00`;
+  total.textContent = `$0.00`;
+  tipAmountPerPerson.textContent = `$0.00`;
   billInput.value = numOfPersonInput.value = customBtn.value = "";
   tipBtn.forEach((btn) => {
     btn.style.backgroundColor = "hsl(183, 100%, 15%)";
