@@ -22,11 +22,11 @@ const calcTip = function (tip) {
 
   const totalTip = bill * (tip / 100);
   const totalAmount = bill + tip;
-  const tipPerPerson = totalTip / numPersonInput;
-  const totalPerPerson = totalAmount / numPersonInput;
+  const tipPerPerson = parseFloat(totalTip / numPersonInput).toFixed(2);
+  const totalPerPerson = parseFloat(totalAmount / numPersonInput).toFixed(2);
 
-  total.textContent = `${totalPerPerson.toFixed(2)}`;
-  tipAmountPerPerson.textContent = `${tipPerPerson.toFixed(2)}`;
+  total.textContent = `$${totalPerPerson}`;
+  tipAmountPerPerson.textContent = `$${tipPerPerson}`;
   resetBtn.style.opacity = 1;
 };
 

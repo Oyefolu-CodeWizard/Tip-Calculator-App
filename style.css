@@ -108,7 +108,7 @@ body {
   border: 1px solid hsl(172, 67%, 45%);
 }
 .custom-tip::placeholder {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   color: hsl(186, 14%, 43%);
   font-weight: bold;
   text-align: left;
@@ -138,7 +138,6 @@ body {
   width: 100%;
   background-color: hsl(183, 100%, 15%);
   padding: 40px;
-  /* border: 1px solid red; */
   border-radius: 15px;
 }
 .tip-per {
@@ -160,11 +159,6 @@ body {
 }
 .tip-value {
   display: flex;
-}
-.tip-value .dollar {
-  width: 15px;
-  object-fit: contain;
-  color: hsl(172, 67%, 45%);
 }
 .tip-value h2 {
   font-size: 2.5rem;
