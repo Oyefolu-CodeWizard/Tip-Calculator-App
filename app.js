@@ -71,6 +71,7 @@ resetBtn.addEventListener("click", () => {
   billInput.value = numOfPersonInput.value = customBtn.value = "";
   tipBtn.forEach((btn) => {
     btn.style.backgroundColor = "hsl(183, 100%, 15%)";
+    btn.style.color = "#fff";
   });
   resetBtn.style.opacity = "0.3";
   peopleInput.style.border = "none";

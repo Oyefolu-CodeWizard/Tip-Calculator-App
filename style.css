@@ -94,6 +94,7 @@ body {
   font-weight: 700;
   color: hsl(0, 0%, 100%);
   border-radius: 5px;
+  cursor: pointer;
 }
 .tip--value .custom-tip {
   width: 49.39px;
