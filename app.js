@@ -15,6 +15,7 @@ const tipAmountPerPerson = document.querySelector(".tip-amount-per");
 const resetBtn = document.querySelector(".reset");
 const peopleInput = document.querySelector(".ppl-input");
 const inputError = document.querySelector(".input-error");
+const tipValues = document.querySelector(".tip--value");
 
 const calcTip = function (tip) {
   const bill = +billInput.value;
@@ -30,16 +31,19 @@ const calcTip = function (tip) {
   resetBtn.style.opacity = 1;
 };
 
-for (let i = 0; i < tipBtn.length; i++) {
-  tipBtn[i].addEventListener("click", () => {
-    for (let r = 0; r < tipBtn.length; r++) {
-      tipBtn[r].style.backgroundColor = "hsl(183, 100%, 15%)";
-      tipBtn[r].style.color = "#fff";
-    }
+tipValues.addEventListener("click", function (e) {
+  if (e.target.classList.contains("value--btn")) {
+    // Remove active tip
+    tipBtn.forEach((t) => {
+      t.style.backgroundColor = "hsl(183, 100%, 15%)";
+      t.style.color = "hsl(0, 0%, 100%)";
+    });
 
-    tipBtn[i].style.backgroundColor = "hsl(172, 67%, 45%)";
-    tipBtn[i].style.color = "hsl(183, 100%, 15%)";
-    const tip = +tipBtn[i].value.slice(0, -1);
+    // Active tip
+    e.target.style.backgroundColor = "hsl(172, 67%, 45%)";
+    e.target.style.color = "hsl(183, 100%, 15%)";
+
+    const tip = +e.target.value.slice(0, -1);
 
     if (numOfPersonInput.value === "0" || numOfPersonInput.value === "") {
       peopleInput.style.border = "1px solid red";
@@ -49,8 +53,8 @@ for (let i = 0; i < tipBtn.length; i++) {
       inputError.textContent = "";
       calcTip(tip);
     }
-  });
-}
+  }
+});
 
 const alertUser = function () {
   alert("Please Click Enter btn after inputing tip");

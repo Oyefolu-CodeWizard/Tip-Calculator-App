@@ -89,10 +89,10 @@ body {
   border: none;
   outline: none;
   background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
   padding: 10px;
   font-size: 16px;
   font-weight: 700;
-  color: hsl(0, 0%, 100%);
   border-radius: 5px;
   cursor: pointer;
 }
